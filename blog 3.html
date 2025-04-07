@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Future of Data Privacy in Online Marketing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #e01094;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    nav {
+      background: #0b66e4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    footer {
+      background: #e01094;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0b66e4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      z-index: 9999;
+    }
+    #cookie-banner button {
+      margin: 10px;
+      padding: 8px 16px;
+      background: #ffd700;
+      border: none;
+      cursor: pointer;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/Logo.jpg" alt="">
+    <h1>Mary & Martha Media and Consulting</h1>
+  </header>
+
+  <nav>
+    <a href="C:\Users\nyark\Downloads\mamee.hmtl\home.html">Home</a>
+    
+  </nav>
+
+  <main class="container">
+    <article>
+      <h2>The Future of Data Privacy in Online Marketing</h2>
+      <p><em>Published on March 25, 2025</em></p>
+
+      <p>As digital marketing continues to evolve, data privacy has become a critical concern for both consumers and businesses. With growing regulations, advancements in technology, and shifting consumer expectations, the future of data privacy in online marketing is poised for significant transformation. Companies must adapt to these changes to build trust and maintain compliance while still delivering personalized marketing experiences.</p>
+
+      <p>One of the primary factors shaping the future of data privacy is stricter regulations. Governments worldwide are enacting laws such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) to give users greater control over their personal data. These regulations require businesses to be transparent about data collection, provide opt-out options, and implement stringent security measures. As more regions introduce similar policies, marketers will need to prioritize compliance to avoid legal consequences and reputational damage.</p>
+
+      <p>Another key development is the decline of third-party cookies. Major browsers are phasing out third-party cookies, forcing marketers to find alternative ways to track and target audiences. First-party data, which is collected directly from users with their consent, will become the cornerstone of digital marketing. Businesses will need to invest in ethical data collection strategies, such as loyalty programs, surveys, and direct interactions, to gather valuable insights while respecting user privacy.</p>
+
+      <p>Artificial Intelligence (AI) and machine learning will play a significant role in maintaining effective marketing strategies while ensuring privacy. AI-driven predictive analytics and contextual advertising will allow businesses to deliver personalized content without relying on invasive tracking methods. Additionally, federated learning and differential privacy techniques will enable companies to analyze consumer behavior while preserving anonymity.</p>
+
+      <p>Consumers are becoming increasingly aware of their digital footprints and are demanding more control over their personal information. Brands that prioritize transparency and ethical data practices will gain a competitive edge by fostering trust and customer loyalty. Providing clear privacy policies, easy opt-out options, and secure data storage will be essential in meeting these expectations.</p>
+
+      <p>In conclusion, the future of data privacy in online marketing is heading towards a more transparent, consumer-centric approach. Businesses must embrace privacy-first strategies, comply with evolving regulations, and leverage new technologies to balance personalization with data protection. By doing so, they can build stronger relationships with their audience while navigating the changing digital landscape.</p>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 Mary & Martha Media and Consulting. All Rights Reserved. |
+    <a href="#privacy-policy" style="color: #fff; text-decoration: underline;">Privacy Policy</a>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner">
+    We use cookies to personalize content, analyze traffic, and store information to enhance your experience. See our 
+    <a href="#privacy-policy" style="color: #ffd700; text-decoration: underline;">Privacy Policy</a>.
+    <br/>
+    <button onclick="acceptCookies()">Accept</button>
+    <button onclick="rejectCookies()">Decline</button>
+  </div>
+
+  <script>
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+    }
+
+    function acceptCookies() {
+      setCookie("cookieConsent", "accepted", 365);
+      document.getElementById("cookie-banner").style.display = "none";
+
+      const data = {
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        platform: navigator.platform
+      };
+      setCookie("visitorData", JSON.stringify(data), 30);
+    }
+
+    function rejectCookies() {
+      setCookie("cookieConsent", "rejected", 365);
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    window.onload = function () {
+      if (!getCookie("cookieConsent")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+  </script>
+
+</body>
+</html>

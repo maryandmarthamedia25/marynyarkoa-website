@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How AI is Transforming Programmatic Ads</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #e01094;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    nav {
+      background: #0b66e4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    footer {
+      background: #e01094;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0b66e4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      z-index: 9999;
+    }
+    #cookie-banner button {
+      margin: 10px;
+      padding: 8px 16px;
+      background: #ffd700;
+      border: none;
+      cursor: pointer;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/Logo.jpg" alt="">
+    <h1>Mary & Martha Media and Consulting</h1>
+  </header>
+
+  <nav>
+    <a href="C:\Users\nyark\Downloads\mamee.hmtl\home.html">Home</a>
+    
+  </nav>
+
+  <main class="container">
+    <article>
+      <h2>How AI is Transforming Programmatic Ads</h2>
+      <p><em>Published on March 25, 2025</em></p>
+
+      <p>Artificial Intelligence (AI) is revolutionizing the advertising industry, particularly in programmatic advertising. Programmatic ads use automated technology to buy and sell digital advertising space, and AI is making this process more efficient, precise, and impactful. By leveraging machine learning, predictive analytics, and data-driven insights, AI transforms how advertisers reach their target audiences, optimize ad performance, and maximize return on investment (ROI).</p>
+
+      <p>One of the most significant ways AI enhances programmatic advertising is through audience targeting and segmentation. AI-powered algorithms analyze vast amounts of user data, including browsing behavior, demographics, and purchasing history, to identify the most relevant audience for an ad campaign. This ensures that advertisements are served to users who are most likely to engage, thereby increasing conversion rates and reducing wasted ad spend.</p>
+
+      <p>Another critical transformation is real-time bidding (RTB) optimization. AI enables advertisers to automate and refine bidding strategies by analyzing historical data and predicting the likelihood of user engagement. This results in smarter, more cost-effective ad placements that maximize impact without overspending.</p>
+
+      <p>AI is also improving ad creatives and personalization. Dynamic creative optimization (DCO) powered by AI allows advertisers to automatically adjust ad content, including images, text, and calls-to-action, based on user preferences and behavior. This leads to highly tailored and engaging ads that resonate more with individual consumers.</p>
+
+      <p>Furthermore, AI enhances fraud detection and brand safety in programmatic advertising. With fraudulent activities such as click fraud and fake impressions costing advertisers billions of dollars annually, AI-driven fraud detection systems use pattern recognition and anomaly detection to identify suspicious activities and prevent budget wastage.</p>
+
+      <p>Finally, AI-powered analytics and reporting tools provide advertisers with deeper insights into campaign performance. By analyzing real-time data, AI helps marketers make data-driven decisions, adjust their strategies instantly, and improve overall efficiency.</p>
+
+      <p>In conclusion, AI is significantly transforming programmatic advertising by making it smarter, more targeted, and highly efficient. As AI technology continues to evolve, advertisers can expect even more sophisticated tools and strategies to enhance their ad campaigns and achieve superior results.</p>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 Mary & Martha Media and Consulting. All Rights Reserved. |
+    <a href="#privacy-policy" style="color: #fff; text-decoration: underline;">Privacy Policy</a>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner">
+    We use cookies to personalize content, analyze traffic, and store information to enhance your experience. See our 
+    <a href="#privacy-policy" style="color: #ffd700; text-decoration: underline;">Privacy Policy</a>.
+    <br/>
+    <button onclick="acceptCookies()">Accept</button>
+    <button onclick="rejectCookies()">Decline</button>
+  </div>
+
+  <script>
+    // Set cookie
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/";
+    }
+
+    // Get cookie
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+    }
+
+    // Accept cookies
+    function acceptCookies() {
+      setCookie("cookieConsent", "accepted", 365);
+      document.getElementById("cookie-banner").style.display = "none";
+
+      // Only store info if accepted
+      const data = {
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        platform: navigator.platform
+      };
+      setCookie("visitorData", JSON.stringify(data), 30);
+    }
+
+    // Reject cookies
+    function rejectCookies() {
+      setCookie("cookieConsent", "rejected", 365);
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    // Show cookie banner if no choice yet
+    window.onload = function () {
+      if (!getCookie("cookieConsent")) {
+        document.getElementById("cookie-banner").style.display = "block";
+      }
+    };
+  </script>
+
+</body>
+</html>
